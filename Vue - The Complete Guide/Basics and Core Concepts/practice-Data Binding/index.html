@@ -23,6 +23,8 @@
       <button v-on:click="onAdd(enteredValue)">Add {{enteredValue}}</button>
       <button v-on:click="onReducer(enteredValue)">Reducer {{enteredValue}}</button>
       <p>Result: {{ counter }}</p>
+      <input type="text" id="goal" v-on:input="setName" v-model="nameValue" />
+      <p>Your name: {{name}}</p>
     </section>
   </body>
 </html>
