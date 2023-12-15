@@ -20,8 +20,8 @@
       <h2>Events in Action</h2>
       <input type="text" id="goal" v-model="enteredValue" />
       
-      <button v-on:click="onAdd(enteredValue)">Add</button>
-      <button v-on:click="onReducer(enteredValue)">Reducer</button>
+      <button v-on:click="onAdd(enteredValue)">Add {{enteredValue}}</button>
+      <button v-on:click="onReducer(enteredValue)">Reducer {{enteredValue}}</button>
       <p>Result: {{ counter }}</p>
     </section>
   </body>
