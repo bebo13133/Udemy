@@ -11,9 +11,9 @@ const app = Vue.createApp({
         outputGoal() {
             const mathRandomNumber = Math.random();
             if (mathRandomNumber < 0.5) {
-                return courseGoalsA
+                return this.courseGoalsA
             } else {
-                return courseGoalsB
+                return this.courseGoalsB
             }
         }
     }
