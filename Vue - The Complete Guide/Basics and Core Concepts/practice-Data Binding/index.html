@@ -18,8 +18,10 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <button v-on:click="onAdd">Add</button>
-      <button v-on:click="onReducer">Reducer</button>
+      <input type="text" id="goal" v-model="enteredValue" />
+      
+      <button v-on:click="onAdd(enteredValue)">Add</button>
+      <button v-on:click="onReducer(enteredValue)">Reducer</button>
       <p>Result: {{ counter }}</p>
     </section>
   </body>

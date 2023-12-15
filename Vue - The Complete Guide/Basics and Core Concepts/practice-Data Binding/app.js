@@ -2,14 +2,15 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
+      enteredValue: ''
     };
   },
   methods:{
-    onAdd (){
-      return this.counter++;
+    onAdd (num){
+      return this.counter=this.counter+Number(num);
     },
-    onReducer () {
-      return this.counter-=1
+    onReducer (num) {
+      return this.counter=this.counter-Number(num)
 
     }
   }
