@@ -21,10 +21,14 @@
       <input type="text" id="goal" v-model="enteredValue" />
       
       <button v-on:click="onAdd(enteredValue)">Add {{enteredValue}}</button>
-      <button v-on:click="onReducer(enteredValue)">Reducer {{enteredValue}}</button>
+      <button v-on:click.left="onReducer(enteredValue)">Reducer {{enteredValue}}</button>
       <p>Result: {{ counter }}</p>
-      <input type="text" id="goal" v-on:input="setName" v-model="nameValue" />
-      <p>Your name: {{name}}</p>
+      <input type="text" id="goal" v-on:input="setName($event,'Iliev')" v-on:keyup.enter="confirmInput"  />
+      <p>Your name: {{confirmName}}</p>
+      <form v-on:submit.prevent="onSubmit"> 
+        <input type="text">
+        <button>Sing up</button>
+      </form>
     </section>
   </body>
 </html>
