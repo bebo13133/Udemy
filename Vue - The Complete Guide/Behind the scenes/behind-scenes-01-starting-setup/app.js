@@ -15,6 +15,24 @@ const app = Vue.createApp({
       this.message = this.$refs.userText.value // използвам референция към инпута
     },
   },
+  beforeCreate () {
+    console.log('beforeCreate()')
+  },
+  created() {
+    console.log('created()')
+  },
+  beforeMount( ){
+    console.log('beforeMount()')
+  },
+  mounted() {
+    console.log('mounted()')
+  }, 
+  beforeUpdate() {
+    console.log('beforeUpdate()')
+  },
+  updated() {
+    console.log('updated()')
+  }
 });
 
 app.mount('#app');
