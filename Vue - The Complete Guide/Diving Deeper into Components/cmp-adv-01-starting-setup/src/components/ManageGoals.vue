@@ -6,7 +6,7 @@
     <error-alert v-if="isInputInvalid">
         <h2>Input is invalid</h2>
         <p>Please entered a characters</p>
-
+    <button @click="ErrorOkay">Okay</button>
     </error-alert>
 </div>
 </template>
@@ -28,6 +28,9 @@ export default {
         setGoal(){
          const enteredGoal =this.$refs.goal.value
          if(enteredGoal === '') this.isInputInvalid = true
+         },
+         ErrorOkay (){
+            this.isInputInvalid = false
          }
     },
 }
